@@ -1,0 +1,23 @@
+CS 334
+Homework 7 - Programming Questions
+
+TOTAL: 42/55
+
+P1: 20/20
+    a: 10/10
+    b: 10/10
+
+Q2: 7/20
+    a: 1/1
+    b: 2/2
+    c: 2/2
+    d: 0/2 Have to use 'and' not 'or' to make sure their is neither h nor H
+    e: 2/2
+    f: 0/4 Not present
+    g: 0/2 Not present
+    h: 0/3 Not present
+    i: 0/2 Not present
+
+P3: 15/15
+    a: 12/12
+    c: 3/3

@@ -1,0 +1,62 @@
+datatype Five =
+	   VarF  of int
+	 | Add   of Five * Five
+	 | Sub   of Five * Five
+	 | Times of Five * Five
+	 | Div   of Five * Five;
+
+datatype FiveList = nil | Cons of (Five * FiveList);
+
+(*Build functions*)
+
+fun buildF() = VarF;
+fun buildAdd(f1,f2) = Add(f1,f2);
+fun buildSub(f1,f2) = Sub(f1,f2);
+fun buildTimes(f1,f2) = Times(f1,f2);
+fun buildDiv(f1,f2) = Div(f1,f2);
+
+(* eval: Five -> int*int -> int *)
+
+fun eval (f:Five)(x:int,y:int) =
+  case f of
+      VarF => 5
+    | Add(f1,f2) => eval (f1) (x,y) + eval (f2) (x,y)
+    | Sub(f1,f2) => eval (f1) (x,y) - eval (f2) (x,y)
+    | TImes(f1,f2) => eval (f1) (x,y) * eval (f2) (x,y)
+    | Div(f1,f2) =>  eval (f1) (x,y) div eval (f2) (x,y);
+
+(* for: int * int * (int -> unit) -> unit
+   Applies the function f to all the integers between low and high
+   inclusive; the results get thrown away.
+ *)
+fun for (low,high,f) =
+  let
+      val i = ref low
+  in      
+      while (!i <= high) do
+	    (
+	      f (!i);
+	      i := !i + 1
+	    );
+      ()
+  end;
+
+
+(* fiveBuilder:
+   Builds an expression tree.
+*)
+
+fun fiveBuilder (int:depth) =
+  let
+      val n = depth * depth
+  in
+  end
+      
+  
+
+
+
+
+
+
+(************** Add Testing Code Here ***************)

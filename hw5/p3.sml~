@@ -1,0 +1,2 @@
+fun concatWords nil = ""
+  | concatWords (l:string list):string = foldl (fn (x,acc) => acc^x) "" l;

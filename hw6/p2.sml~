@@ -1,0 +1,11 @@
+fun mult (a,b) =
+  let
+      val x = ref a;
+      val y = ref b;
+      val sum = ref 0;
+  in
+      if !x=0 then 0
+      else while !x >= 1 do (sum := !y+!sum;x := x-1)
+  end;
+
+mult (2,3);

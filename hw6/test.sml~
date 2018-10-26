@@ -1,0 +1,5 @@
+fun combo n 0 = 1
+  | combo n 1 = 1
+  | combo n r = combo (n-1) (r-1) + combo (n-1) r;
+
+combo 4 2;
